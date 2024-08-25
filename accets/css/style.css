@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.813);
+}
+
+section {
+    padding: 40px 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.all-section {
+    background: rgba(255, 255, 255, 0.2);
+    /* خلفية نصف شفافة */
+    backdrop-filter: blur(10px);
+    /* تأثير التمويه */
+    -webkit-backdrop-filter: blur(10px);
+    /* دعم للمتصفحات القديمة */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* حدود خفيفة */
+    border-radius: 10px;
+    /* زوايا دائرية */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* ظل خفيف */
+    padding: 20px;
+}
+
+.btn_search {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.btn_search button {
+    background-color: #4070f4;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.searchInput {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.searchInput input {
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+}
+
+.adduser {
+    margin-top: 20px;
+}
+
+.adduser button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    text-transform: capitalize;
+}
+
+.adduser button:nth-child(1) {
+    background-color: #1645c6;
+    margin-right: 10px;
+}
+
+.adduser button:nth-child(2) {
+    background-color: red;
+}
+
+.adduser button a {
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 25px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px #4070f4;
+    cursor: pointer;
+}
+
+
+.parent::before {
+    content: "";
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    background-color: #4070f4;
+    top: 0;
+    border-radius: 24px 24px 0 0;
+}
+
+.img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #4070f4;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: solid 3px #fff;
+}
+
+.parent .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text span {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.job {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.btn_action {
+    margin-top: 15px;
+}
+
+.btn_action button {
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_action button:nth-child(1) {
+    background-color: #4070f4;
+}
+
+.btn_action button:nth-child(1):hover {
+    background-color: #1645c6;
+}
+
+.btn_action button:nth-child(2) {
+    background-color: rgb(239, 239, 61);
+}
+
+.btn_action button:nth-child(2):hover {
+    background-color: rgb(224, 224, 17);
+}
+
+.btn_action button:nth-child(3) {
+    background-color: red;
+}
+
+.btn_action button:nth-child(3):hover {
+    background-color: rgb(214, 14, 14);
+}
+
+.imgform {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.imgform::before {
+    position: absolute;
+    content: "+";
+    top: 60%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.imgform input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.from-input {
+    width: 100%;
+}
+
+.from-input div {
+    width: 100%;
+}
+
+.from-input label {
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.from-input div input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    border: solid 2px #1645c6;
+}
+
+.from-input div input:focus {
+    transform: scale(1.07);
+}
+
+.parent2 {
+    width: 50%;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.parent2::before {
+    height: 15%;
+}
+
+.btn-submit {
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4070f4;
+    color: white;
+    text-transform: capitalize;
+}
+
+.shwocard {
+    position: fixed;
+    top: 50%;
+    left: -150%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    z-index: 100;
+
+}
+
+.shwocard .from-input {
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 2px #1645c6;
+}
+
+.shwocard .imgform::before {
+    display: none;
+}
+
+.shwocard i {
+    color: black;
+    z-index: 100;
+    position: absolute;
+    right: 30px;
+    font-size: 50px;
+    border-radius: 50%;
+    background: white;
+}
+
+.shwocard .from-input div {
+    margin: 15px 0;
+}
+
+.shwocard .from-input div span {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.from-input div span {
+    text-transform: capitalize;
+}
